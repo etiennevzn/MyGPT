@@ -1,7 +1,6 @@
 # My GPT — Built from Scratch
 
 > Assembled from the NeetCode ML course on [NeetCode.io](https://neetcode.io)
-> Built by **Etienne Vezien** on May 22, 2026
 
 Every file in this project is code I wrote and submitted while completing the NeetCode ML course.
 The problems progressively build from gradient descent fundamentals all the way to a working GPT.
