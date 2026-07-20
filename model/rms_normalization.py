@@ -10,4 +10,4 @@ class Solution:
         rms = np.sqrt(np.mean(np.power(x, 2)) + eps)
         x_hat = x / rms
         output = gamma * x_hat
-        return np.round(output, 4)
+        return np.round(output, 4).tolist()
