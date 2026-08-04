@@ -16,10 +16,10 @@ class Solution:
         # return (np.round(w, 5), round(b, 5))
         w = np.zeros(X.shape[1])
         b = 0
+        n = X.shape[0]
 
         for i in range(epochs):
             y_pred  = X @ w + b
-            n = len(X)
             dL_dw = 2/n * X.T @ (y_pred - y)
             dL_db = 2 * np.mean(y_pred - y)
             w = w - lr * dL_dw
