@@ -20,13 +20,9 @@ class Solution:
             words = sentence.split(" ")
             for word in words:
                 cur.append(dic[word])
-            res.append(cur)
+            res.append(torch.tensor(cur))
 
-        tokens = []
-        for sentence in res :
-            tokens.append(torch.tensor(sentence))
-        tokens = torch.nn.utils.rnn.pad_sequence(tokens, padding_value = 0, batch_first = True)
-
+        tokens = torch.nn.utils.rnn.pad_sequence(res, padding_value = 0, batch_first = True)
         return tokens
         
 
